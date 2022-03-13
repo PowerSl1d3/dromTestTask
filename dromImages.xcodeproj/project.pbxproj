@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		901D235127DD900C00136010 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D235027DD900C00136010 /* GalleryCollectionView.swift */; };
+		90248A6B27DD925D00C979E5 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248A6A27DD925D00C979E5 /* CarModel.swift */; };
+		90248A6D27DD94A800C979E5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248A6C27DD94A800C979E5 /* GalleryCollectionViewCell.swift */; };
+		904F703D27DCCE0500E13338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F703C27DCCE0500E13338 /* AppDelegate.swift */; };
+		904F703F27DCCE0500E13338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F703E27DCCE0500E13338 /* SceneDelegate.swift */; };
+		904F704727DCCE0500E13338 /* dromImages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 904F704527DCCE0500E13338 /* dromImages.xcdatamodeld */; };
+		904F704927DCCE0500E13338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 904F704827DCCE0500E13338 /* Assets.xcassets */; };
+		904F705927DCCF8700E13338 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F705727DCCF8700E13338 /* MainViewController.swift */; };
+		904F705A27DCCF8700E13338 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904F705827DCCF8700E13338 /* MainViewController.xib */; };
+		904F706227DCDACA00E13338 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F706127DCDACA00E13338 /* ImageCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		901D235027DD900C00136010 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		90248A6A27DD925D00C979E5 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		90248A6C27DD94A800C979E5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		904F703927DCCE0500E13338 /* dromImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dromImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		904F703C27DCCE0500E13338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		904F703E27DCCE0500E13338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		904F704627DCCE0500E13338 /* dromImages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dromImages.xcdatamodel; sourceTree = "<group>"; };
+		904F704827DCCE0500E13338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		904F704D27DCCE0500E13338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		904F705727DCCF8700E13338 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		904F705827DCCF8700E13338 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		904F706127DCDACA00E13338 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		904F703627DCCE0500E13338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		904F703027DCCE0500E13338 = {
+			isa = PBXGroup;
+			children = (
+				904F703B27DCCE0500E13338 /* dromImages */,
+				904F703A27DCCE0500E13338 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		904F703A27DCCE0500E13338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				904F703927DCCE0500E13338 /* dromImages.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		904F703B27DCCE0500E13338 /* dromImages */ = {
+			isa = PBXGroup;
+			children = (
+				904F703C27DCCE0500E13338 /* AppDelegate.swift */,
+				904F703E27DCCE0500E13338 /* SceneDelegate.swift */,
+				904F704827DCCE0500E13338 /* Assets.xcassets */,
+				904F704D27DCCE0500E13338 /* Info.plist */,
+				904F704527DCCE0500E13338 /* dromImages.xcdatamodeld */,
+				904F705727DCCF8700E13338 /* MainViewController.swift */,
+				904F705827DCCF8700E13338 /* MainViewController.xib */,
+				904F706127DCDACA00E13338 /* ImageCache.swift */,
+				901D235027DD900C00136010 /* GalleryCollectionView.swift */,
+				90248A6A27DD925D00C979E5 /* CarModel.swift */,
+				90248A6C27DD94A800C979E5 /* GalleryCollectionViewCell.swift */,
+			);
+			path = dromImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		904F703827DCCE0500E13338 /* dromImages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 904F705027DCCE0500E13338 /* Build configuration list for PBXNativeTarget "dromImages" */;
+			buildPhases = (
+				904F703527DCCE0500E13338 /* Sources */,
+				904F703627DCCE0500E13338 /* Frameworks */,
+				904F703727DCCE0500E13338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dromImages;
+			productName = dromImages;
+			productReference = 904F703927DCCE0500E13338 /* dromImages.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		904F703127DCCE0500E13338 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					904F703827DCCE0500E13338 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 904F703427DCCE0500E13338 /* Build configuration list for PBXProject "dromImages" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 904F703027DCCE0500E13338;
+			productRefGroup = 904F703A27DCCE0500E13338 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				904F703827DCCE0500E13338 /* dromImages */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		904F703727DCCE0500E13338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904F704927DCCE0500E13338 /* Assets.xcassets in Resources */,
+				904F705A27DCCF8700E13338 /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		904F703527DCCE0500E13338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904F706227DCDACA00E13338 /* ImageCache.swift in Sources */,
+				90248A6D27DD94A800C979E5 /* GalleryCollectionViewCell.swift in Sources */,
+				90248A6B27DD925D00C979E5 /* CarModel.swift in Sources */,
+				904F703D27DCCE0500E13338 /* AppDelegate.swift in Sources */,
+				904F703F27DCCE0500E13338 /* SceneDelegate.swift in Sources */,
+				901D235127DD900C00136010 /* GalleryCollectionView.swift in Sources */,
+				904F704727DCCE0500E13338 /* dromImages.xcdatamodeld in Sources */,
+				904F705927DCCF8700E13338 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		904F704E27DCCE0500E13338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		904F704F27DCCE0500E13338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		904F705127DCCE0500E13338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9C5W3RKJH6;
+				INFOPLIST_FILE = dromImages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PowerSl1d3.dromImages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		904F705227DCCE0500E13338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9C5W3RKJH6;
+				INFOPLIST_FILE = dromImages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PowerSl1d3.dromImages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		904F703427DCCE0500E13338 /* Build configuration list for PBXProject "dromImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904F704E27DCCE0500E13338 /* Debug */,
+				904F704F27DCCE0500E13338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		904F705027DCCE0500E13338 /* Build configuration list for PBXNativeTarget "dromImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904F705127DCCE0500E13338 /* Debug */,
+				904F705227DCCE0500E13338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		904F704527DCCE0500E13338 /* dromImages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				904F704627DCCE0500E13338 /* dromImages.xcdatamodel */,
+			);
+			currentVersion = 904F704627DCCE0500E13338 /* dromImages.xcdatamodel */;
+			path = dromImages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 904F703127DCCE0500E13338 /* Project object */;
+}
