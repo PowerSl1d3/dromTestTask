@@ -7,8 +7,10 @@
 
 import UIKit
 
+/// Задание №1. Реализовать приложение, на UINavigationController'е
 class MainViewController: UIViewController {
     
+    /// Задание №2. В качестве view для UINavigationController'а используется UICollectionView
     private var galleryCollectionView = GalleryCollectionView()
     
     override func viewDidLoad() {

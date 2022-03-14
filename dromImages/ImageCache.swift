@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// Задание №4. Кеш изображений.
+/// -warning: Наверное, в проде не стоит делать переменную кеша глобальной:)
+
 let imageCache = NSCache<NSString, UIImage>()
 extension UIImageView {
     func loadImageUsingCache(withUrl urlString : String) {

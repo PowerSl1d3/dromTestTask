@@ -39,6 +39,7 @@ class GalleryCollectionView: UICollectionView,
         return cells.count
     }
     
+    /// Задание №3. Загрузка картинок по мере необходимости
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath) as! GalleryCollectionViewCell
         cells[indexPath.row].loadImageUsingCacheFor(index: indexPath.row)
@@ -55,6 +56,7 @@ class GalleryCollectionView: UICollectionView,
         cell.isHidden = false
     }
     
+    /// Задание №5. Анимация покидания картинки рабочей области приложения
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
@@ -73,6 +75,7 @@ class GalleryCollectionView: UICollectionView,
         }, completion: nil)
     }
     
+    /// Задание №6. Pull to refresh
     @objc func refresh(refreshControl: UIRefreshControl) {
         imageCache.removeAllObjects()
         reloadData()
