@@ -7,21 +7,39 @@
 
 import UIKit
 
-struct CarModel {
+extension Array {
+    init(repeating: (() -> Element), count: Int) {
+        self = []
+        for _ in 0..<count {
+            self.append(repeating())
+        }
+    }
+}
+
+class CarModel {
     
-    var carImage: UIImageView
+    var carImage: UIImageView?
+    var URL: String?
     
     static func fetchCars() -> [CarModel] {
         
-        var returnedCars = [CarModel]()
+        let returnedCars = Array<CarModel>(repeating: CarModel.init, count: imageURLsToLoad.count)
         
         for i in 0..<6 {
-            let downloadCar = UIImageView()
-            downloadCar.loadImageUsingCache(withUrl: imageURLsToLoad[i])
-            returnedCars.append(CarModel(carImage: downloadCar))
+            returnedCars[i].URL = imageURLsToLoad[i]
         }
         
         return returnedCars
+    }
+    
+    func loadImageUsingCacheFor(index i: Int) {
+        guard carImage == nil else {return}
+        carImage = UIImageView()
+        carImage?.loadImageUsingCache(withUrl: URL!)
+    }
+    
+    static func getMaxCarsCountFromDataBase() -> Int {
+        return CarModel.imageURLsToLoad.count
     }
     
     private static let imageURLsToLoad = [
