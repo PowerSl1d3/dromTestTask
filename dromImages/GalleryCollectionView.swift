@@ -7,16 +7,12 @@
 
 import UIKit
 
-enum ErrorGallery: Error {
-    case WTF
-}
-
 class GalleryCollectionView: UICollectionView,
                              UICollectionViewDelegate,
                              UICollectionViewDataSource,
                              UICollectionViewDelegateFlowLayout {
     
-    var cells = [CarModel]()
+    var cells = CarModel.fetchCars()
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -24,7 +20,6 @@ class GalleryCollectionView: UICollectionView,
         layout.minimumLineSpacing = 0
         super.init(frame: .zero, collectionViewLayout: layout)
         
-        backgroundColor = .red
         delegate = self
         dataSource = self
         register(GalleryCollectionViewCell.self,
@@ -40,17 +35,14 @@ class GalleryCollectionView: UICollectionView,
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(cells: [CarModel]) {
-        self.cells = cells
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath) as! GalleryCollectionViewCell
-        cell.setupCarImageView(carImageView: cells[indexPath.row].carImage)
+        cells[indexPath.row].loadImageUsingCacheFor(index: indexPath.row)
+        cell.setupCarImageView(carImageView: cells[indexPath.row].carImage!)
         cell.layer.borderWidth = 10
         return cell
     }
@@ -59,22 +51,30 @@ class GalleryCollectionView: UICollectionView,
         return CGSize(width: self.frame.width, height: self.frame.width)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.isHidden = false
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
         
-        UIView.animate(withDuration: 1, animations: {
-            cell.frame = cell.frame.offsetBy(dx: -cell.frame.width, dy: 0)
+        let duration: TimeInterval = 0.5
+        UIView.animate(withDuration: duration, animations: {
+            cell.frame = cell.frame.offsetBy(dx: cell.frame.width, dy: 0)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                cell.isHidden = true
+                self.cells.remove(at: indexPath.row)
+                collectionView.deleteItems(at: [indexPath])
+                self.reloadData()
+            }
+            
         }, completion: nil)
-        
-        cells.remove(at: indexPath.row)
-        collectionView.deleteItems(at: [indexPath])
-        collectionView.reloadData()
     }
     
     @objc func refresh(refreshControl: UIRefreshControl) {
         imageCache.removeAllObjects()
-        cells.removeAll()
         reloadData()
         cells = CarModel.fetchCars()
         refreshControl.endRefreshing()
