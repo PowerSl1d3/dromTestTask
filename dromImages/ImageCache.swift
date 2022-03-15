@@ -29,7 +29,8 @@ extension UIImageView {
         activityIndicator.startAnimating()
         activityIndicator.center = self.center
 
-        URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
+        URLSession.shared.dataTask(with: url!, completionHandler: { [weak self]
+            data, response, error in
             if error != nil {
                 print(error!)
                 return
@@ -40,7 +41,7 @@ extension UIImageView {
             DispatchQueue.main.async {
                 if let image = UIImage(data: data!) {
                     imageCache.setObject(image, forKey: urlString as NSString)
-                    self.image = image
+                    self!.image = image
                     activityIndicator.removeFromSuperview()
                 }
             }

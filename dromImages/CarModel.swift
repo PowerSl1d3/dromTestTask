@@ -33,7 +33,11 @@ class CarModel {
     }
     
     func loadImageUsingCacheFor(index i: Int) {
-        guard carImage == nil else {return}
+        guard carImage == nil else {
+            print("Using cached image")
+            return
+            
+        }
         carImage = UIImageView()
         carImage?.loadImageUsingCache(withUrl: URL!)
     }

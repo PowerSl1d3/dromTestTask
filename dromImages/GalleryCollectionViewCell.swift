@@ -11,7 +11,7 @@ class GalleryCollectionViewCell: UICollectionViewCell,
                                 UICollectionViewDelegate {
     
     static let reuseId = "GalleryCollectionViewCell"
-    var imageView: UIImageView?
+    weak var imageView: UIImageView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -78,8 +78,9 @@ class GalleryCollectionView: UICollectionView,
     /// Задание №6. Pull to refresh
     @objc func refresh(refreshControl: UIRefreshControl) {
         imageCache.removeAllObjects()
-        reloadData()
+        collectionViewLayout.invalidateLayout()
         cells = CarModel.fetchCars()
+        reloadData()
         refreshControl.endRefreshing()
     }
     
